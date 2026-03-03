@@ -37,3 +37,28 @@ build/
 
 ### Mac OS ###
 .DS_Store
+### Java ###
+*.class
+*.jar
+*.war
+*.ear
+*.log
+
+### Environment / secrets ###
+.env
+*.properties.local
+
+### IntelliJ IDEA (extra) ###
+.idea/
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/usage.statistics.xml
+.idea/dictionaries/
+.idea/shelf/
+out/
+
+### Maven (extra) ###
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+release.properties
