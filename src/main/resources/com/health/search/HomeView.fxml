@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.health.search.controller.HomeController"
+      styleClass="root-container"
+      stylesheets="@styles.css"
+      spacing="20">
+    <padding><Insets top="30" right="40" bottom="30" left="40"/></padding>
+    <Label text="🏥 HealthConnect" styleClass="app-title"/>
+    <Label text="Find doctors and services near you" styleClass="app-subtitle"/>
+    <HBox spacing="10" alignment="CENTER_LEFT" styleClass="search-bar">
+        <TextField fx:id="searchField" promptText="Search doctors or services…"
+                   styleClass="search-input" HBox.hgrow="ALWAYS" onAction="#handleSearch"/>
+        <Button text="Search" styleClass="search-button" onAction="#handleSearch" defaultButton="true"/>
+        <Button text="✕" styleClass="clear-button" onAction="#handleClear"/>
+    </HBox>
+    <Label fx:id="statusLabel" styleClass="status-label" wrapText="true"/>
+    <VBox spacing="6" VBox.vgrow="ALWAYS">
+        <Label fx:id="resultsHeading" styleClass="results-heading" visible="false" managed="false"/>
+        <ListView fx:id="resultsListView" styleClass="results-list" VBox.vgrow="ALWAYS"
+                  visible="false" managed="false"/>
+    </VBox>
+</VBox>
